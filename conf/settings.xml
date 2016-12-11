@@ -4,7 +4,7 @@
         <name>mig-india</name>
         <git-url>https://github.com/wso2telco/mig-india</git-url>
         <sync>true</sync>
-        <branch></branch>
+        <branch>master</branch>
         <source-dir></source-dir>
         <deploy-dir></deploy-dir>
         <artifacts>
@@ -22,4 +22,24 @@
             </artifact>
         </artifacts>
     </project>
+    <name>mig-india</name>
+        <git-url>https://github.com/wso2telco/mig-india2</git-url>
+        <sync>false</sync>
+        <branch></branch>
+        <source-dir></source-dir>
+        <deploy-dir></deploy-dir>
+        <artifacts>
+            <artifact>
+                <name>open-id-token-builder</name>
+                <type>jar</type>
+                <source-path></source-path>
+                <deploy-path></deploy-path>
+                <properties>
+                    <property>
+                        <filename></filename>
+                        <path></path>
+                    </property>
+                </properties>
+            </artifact>
+        </artifacts>
 </projects>

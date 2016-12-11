@@ -5,7 +5,7 @@
         <git-url>https://github.com/wso2telco/mig-india</git-url>
         <sync>true</sync>
         <branch>master</branch>
-        <source-dir></source-dir>
+        <source-dir>/home/isuru/wso2/git/test2</source-dir>
         <deploy-dir></deploy-dir>
         <artifacts>
             <artifact>

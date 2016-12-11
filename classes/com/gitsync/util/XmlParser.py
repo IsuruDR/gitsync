@@ -56,4 +56,5 @@ class XmlParser:
 
             projects_map['project_' + repr(project_index)] = project_details
             project_index += 1
+        projects_map['number-of-projects'] = project_index
         return projects_map

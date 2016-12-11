@@ -9,7 +9,23 @@
         <deploy-dir></deploy-dir>
         <artifacts>
             <artifact>
-                <name>open-id-token-builder</name>
+                <name>open-id-token-builder1</name>
+                <type>jar</type>
+                <source-path>/source</source-path>
+                <deploy-path>/deploy</deploy-path>
+                <properties>
+                    <property>
+                        <filename>file1</filename>
+                        <path>/file1</path>
+                    </property>
+                     <property>
+                        <filename>file2</filename>
+                        <path>/file2</path>
+                    </property>
+                </properties>
+            </artifact>
+            <artifact>
+                <name>gsma-athrticators</name>
                 <type>jar</type>
                 <source-path></source-path>
                 <deploy-path></deploy-path>
@@ -22,16 +38,33 @@
             </artifact>
         </artifacts>
     </project>
-    <name>mig-india</name>
+    <project>
+        <name>mig-india2</name>
         <git-url>https://github.com/wso2telco/mig-india2</git-url>
-        <sync>false</sync>
-        <branch></branch>
+        <sync>true2</sync>
+        <branch>master</branch>
         <source-dir></source-dir>
         <deploy-dir></deploy-dir>
         <artifacts>
             <artifact>
-                <name>open-id-token-builder</name>
-                <type>jar</type>
+                <name>open-id-token-builder2</name>
+                <type>war</type>
+                <source-path>/source2</source-path>
+                <deploy-path>/deploy2</deploy-path>
+                <properties>
+                    <property>
+                        <filename>file12</filename>
+                        <path>/file12</path>
+                    </property>
+                     <property>
+                        <filename>file22</filename>
+                        <path>/file22</path>
+                    </property>
+                </properties>
+            </artifact>
+            <artifact>
+                <name>gsma-athrticators2</name>
+                <type>jar2</type>
                 <source-path></source-path>
                 <deploy-path></deploy-path>
                 <properties>
@@ -42,4 +75,5 @@
                 </properties>
             </artifact>
         </artifacts>
+    </project>
 </projects>

@@ -1,0 +1,75 @@
+{
+  "projects": {
+    "project": [
+      {
+        "name": "test",
+        "git-url": "https://github.com/IsuruDilshan/mig-india.git",
+        "sync": "true",
+        "branch": "master",
+        "project-home": "/home/isuru/wso2/git/MC/master-mig-india/mig-india",
+        "deploy-dir": "/home/isuru/wso2/workspace/MC/india-node/test/wso2is",
+        "artifacts": {
+          "artifact": [
+            {
+              "name": "open-id-token-builder",
+              "type": "jar",
+              "source-path": "is-artifacts/openid-token-builder",
+              "deploy-path": "repository/components/dropins",
+              "properties": {
+                "property": [
+                  {
+                    "filename": "application.properties",
+                    "source-path": "src/main/resources/com/axiata/dialog/openidtokenbuilder",
+                    "deploy-path": "src/main/resources/com/axiata/dialog/openidtokenbuilder/test"
+                  },
+                  {
+                    "filename": "application.properties",
+                    "source-path": "src/main/resources/com/axiata/dialog/openidtokenbuilder",
+                    "deploy-path": "src/main/resources/com/axiata/dialog/openidtokenbuilder"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "gsma-athrticators",
+              "type": "jar",
+              "source-path": "is-artifacts/openid-token-builder",
+              "deploy-path": "repository/components/dropins"
+            }
+          ]
+        }
+      },
+      {
+        "name": "mig-india2",
+        "git-url": "https://github.com/wso2telco/mig-india2",
+        "sync": "true2",
+        "branch": "master",
+        "project-home": "/home/isuru/wso2/git/MC/master-mig-india/mig-india",
+        "deploy-dir": "/home/isuru/wso2/workspace/MC/india-node/test/wso2is",
+        "artifacts": {
+          "artifact": [
+            {
+              "name": "open-id-token-builder2",
+              "type": "war",
+              "source-path": "/source2",
+              "deploy-path": "/deploy2"
+            },
+            {
+              "name": "gsma-athrticators2",
+              "type": "jar2",
+              "source-path": "/source2",
+              "deploy-path": "/deploy2",
+              "properties": {
+                "property": {
+                  "filename": "application.properties",
+                  "source-path": "src/main/resources/com/axiata/dialog/openidtokenbuilder",
+                  "deploy-path": "src/main/resources/com/axiata/dialog/openidtokenbuilder"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

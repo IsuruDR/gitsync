@@ -33,20 +33,26 @@ class XmlParser:
 
                 property_details = {}
 
+                property_configs = {}
                 if properties is not None:
+                    property_index = 0
                     for property_value in properties:
                         property_value = ET.ElementTree(property_value)
 
                         property_details['filename'] = property_value.find('filename').text
-                        property_details['path'] = property_value.find('path').text
+                        property_details['source-path'] = property_value.find('source-path').text
+                        property_details['deploy-path'] = property_value.find('deploy-path').text
+                        property_configs['property_' + repr(property_index)] = property_details
+                        property_index += 1
+                        print(property_configs)
 
-                    artifact_details = {'name': artifact.find('name').text,
-                                        'type': artifact.find('type').text,
-                                        'source-path': artifact.find('source-path').text,
-                                        'deploy-path': artifact.find('deploy-path').text,
-                                        'properties': property_details}
-                    artifacts_map['artifact_' + repr(artifact_index)] = artifact_details
-                    artifact_index += 1
+                artifact_details = {'name': artifact.find('name').text,
+                                    'type': artifact.find('type').text,
+                                    'source-path': artifact.find('source-path').text,
+                                    'deploy-path': artifact.find('deploy-path').text,
+                                    'properties': property_configs}
+                artifacts_map['artifact_' + repr(artifact_index)] = artifact_details
+                artifact_index += 1
 
             project_details['name'] = name.tag.text
             project_details['git-url'] = git_url.tag.text

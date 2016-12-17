@@ -1,12 +1,15 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
 import shlex
 import subprocess
+import sys
+
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from src.util.XmlParser import XmlParser
-
 from src.util.Spinner import Spinner
+
 
 parsedXml = XmlParser.parse_xml('../conf/settings.xml')
 

@@ -13,6 +13,8 @@ from src.util.Spinner import Spinner
 
 parsedXml = XmlParser.parse_xml('../conf/settings.xml')
 
+print(parsedXml.get('project_0'))
+
 name = parsedXml.get('project_0').get('name')
 source_dir = parsedXml.get('project_0').get('project-home')
 branch = parsedXml.get('project_0').get('branch')

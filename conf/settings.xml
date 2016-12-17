@@ -2,25 +2,25 @@
 <projects>
     <project>
         <name>test</name>
-        <git-url>https://isurudilshan:urusi*lid89@github.com/WSO2Telco/component-ids.git</git-url>
+        <git-url>https://github.com/WSO2Telco/component-ids.git</git-url>
         <sync>true</sync>
         <branch>migration_52</branch>
-        <project-home>/home/isuru/wso2/git/MC/migration/component-ids</project-home>
-        <deploy-dir></deploy-dir>
+        <project-home>/home/isuru/wso2/git/MC/master-mig-india/mig-india</project-home>
+        <deploy-dir>/home/isuru/wso2/workspace/MC/india-node/test/wso2is</deploy-dir>
         <artifacts>
             <artifact>
-                <name>open-id-token-builder1</name>
+                <name>open-id-token-builder</name>
                 <type>jar</type>
-                <source-path>/source</source-path>
-                <deploy-path>/deploy</deploy-path>
+                <source-path>is-artifacts/openid-token-builder</source-path>
+                <deploy-path>repository/components/dropins</deploy-path>
                 <properties>
                     <property>
-                        <filename>file1</filename>
-                        <path>/file1</path>
+                        <filename>application.properties</filename>
+                        <path>src/main/resources/com/axiata/dialog/openidtokenbuilder</path>
                     </property>
                      <property>
-                        <filename>file2</filename>
-                        <path>/file2</path>
+                        <filename>application.properties</filename>
+                        <path>src/main/resources/com/axiata/dialog/util</path>
                     </property>
                 </properties>
             </artifact>

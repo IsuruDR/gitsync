@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <projects>
     <project>
-        <name>mig-india</name>
-        <git-url>https://github.com/wso2telco/mig-india</git-url>
+        <name>test</name>
+        <git-url>https://isurudilshan:urusi*lid89@github.com/WSO2Telco/component-ids.git</git-url>
         <sync>true</sync>
-        <branch>master</branch>
-        <source-dir>/home/isuru/wso2/git/test2</source-dir>
+        <branch>migration_52</branch>
+        <project-home>/home/isuru/wso2/git/MC/migration/component-ids</project-home>
         <deploy-dir></deploy-dir>
         <artifacts>
             <artifact>
@@ -43,7 +43,7 @@
         <git-url>https://github.com/wso2telco/mig-india2</git-url>
         <sync>true2</sync>
         <branch>master</branch>
-        <source-dir></source-dir>
+        <project-home></project-home>
         <deploy-dir></deploy-dir>
         <artifacts>
             <artifact>

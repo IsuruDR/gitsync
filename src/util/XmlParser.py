@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import xml.etree.ElementTree as ET
 
 
@@ -17,7 +19,7 @@ class XmlParser:
             git_url = ET.Element(project.find('git-url'))
             is_sync = ET.Element(project.find('sync'))
             branch = ET.Element(project.find('branch'))
-            source_dir = ET.Element(project.find('source-dir'))
+            source_dir = ET.Element(project.find('project-home'))
             deploy_dir = ET.Element(project.find('deploy-dir'))
             artifacts = ET.ElementTree(project.find('artifacts'))
 
@@ -50,7 +52,7 @@ class XmlParser:
             project_details['git-url'] = git_url.tag.text
             project_details['sync'] = is_sync.tag.text
             project_details['branch'] = branch.tag.text
-            project_details['source-dir'] = source_dir.tag.text
+            project_details['project-home'] = source_dir.tag.text
             project_details['deploy-dir'] = deploy_dir.tag.text
             project_details['artifacts'] = artifacts_map
 

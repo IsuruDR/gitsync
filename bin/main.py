@@ -1,21 +1,46 @@
+#!/usr/bin/env python
+
 import os
-import subprocess, shlex
-from classes.com.gitsync.util.XmlParser import XmlParser
+import shlex
+import subprocess
+
+from src.util.XmlParser import XmlParser
+
+from src.util.Spinner import Spinner
 
 parsedXml = XmlParser.parse_xml('../conf/settings.xml')
 
 name = parsedXml.get('project_0').get('name')
-source_dir = parsedXml.get('project_0').get('source-dir')
+source_dir = parsedXml.get('project_0').get('project-home')
 branch = parsedXml.get('project_0').get('branch')
+artifact = parsedXml.get('project_0').get('artifacts').get('artifact_0')
 
-print('Syncing with project ' + repr(name) + 's ' + repr(branch) + ' branch')
+print('Pulling changes of project ' + name + ' ' + branch + ' branch')
 os.chdir(source_dir)
-git_cmd = 'git pull origin ' + repr(branch)
+git_cmd = 'git pull'
 kwargs = {}
 kwargs['stdout'] = subprocess.PIPE
 kwargs['stderr'] = subprocess.PIPE
 proc = subprocess.Popen(shlex.split(git_cmd), **kwargs)
+
+Spinner.load_spinner()
+
 (stdout_str, stderr_str) = proc.communicate()
 return_code = proc.wait()
 print(return_code)
 print(stdout_str)
+
+if return_code == 0:
+    os.system('git checkout ' + branch)
+
+    artifact_source_path = artifact.get('source-path')
+    artifact_deploy_path = artifact.get('deploy-path')
+    artifact_type = artifact.get('type')
+    artifact_name = artifact.get('name')
+
+    os.chdir(artifact_source_path)
+    os.system('mvn clean install')
+
+    print(artifact)
+else:
+    print('Error occurred while pulling changes')

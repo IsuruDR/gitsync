@@ -12,6 +12,8 @@
           "artifact": [
             {
               "name": "open-id-token-builder",
+              "final-name" : "OpenIDTokenBuilder",
+              "version" : "0.0.1-SNAPSHOT",
               "type": "jar",
               "source-path": "is-artifacts/openid-token-builder",
               "deploy-path": "repository/components/dropins",
@@ -20,21 +22,31 @@
                   {
                     "filename": "application.properties",
                     "source-path": "src/main/resources/com/axiata/dialog/openidtokenbuilder",
-                    "deploy-path": "src/main/resources/com/axiata/dialog/openidtokenbuilder/test"
+                    "deploy-path": "/home/isuru/wso2/workspace/MC/india-node/test/wso2is/props"
                   },
                   {
                     "filename": "application.properties",
                     "source-path": "src/main/resources/com/axiata/dialog/openidtokenbuilder",
-                    "deploy-path": "src/main/resources/com/axiata/dialog/openidtokenbuilder"
+                    "deploy-path": "/home/isuru/wso2/workspace/MC/india-node/test/wso2is/props"
                   }
                 ]
               }
             },
             {
-              "name": "gsma-athrticators",
-              "type": "jar",
-              "source-path": "is-artifacts/openid-token-builder",
-              "deploy-path": "repository/components/dropins"
+              "name": "session-updater",
+              "final-name" : "SessionUpdater",
+              "type": "war",
+              "source-path": "is-artifacts/webapps/session-updater",
+              "deploy-path": "repository/deployment/server/webapps",
+              "properties": {
+                "property": [
+                  {
+                    "filename": "application.properties",
+                    "source-path": "src/main/resources",
+                    "deploy-path": "SessionUpdater/WEB-INF/classes"
+                  }
+                ]
+              }
             }
           ]
         }
@@ -52,13 +64,15 @@
               "name": "open-id-token-builder2",
               "type": "war",
               "source-path": "/source2",
-              "deploy-path": "/deploy2"
+              "deploy-path": "/deploy2",
+              "final-name" : "ot"
             },
             {
               "name": "gsma-athrticators2",
               "type": "jar2",
               "source-path": "/source2",
               "deploy-path": "/deploy2",
+              "final-name" : "gsma-athrticators2",
               "properties": {
                 "property": {
                   "filename": "application.properties",
